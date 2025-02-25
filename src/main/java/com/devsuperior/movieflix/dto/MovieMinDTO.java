@@ -2,8 +2,6 @@ package com.devsuperior.movieflix.dto;
 
 import java.io.Serializable;
 
-import com.devsuperior.movieflix.projections.MovieMinProjection;
-
 public class MovieMinDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
@@ -22,14 +20,6 @@ public class MovieMinDTO implements Serializable {
 		this.subTitle = subTitle;
 		this.year = year;
 		this.imgUrl = imgUrl;
-	}
-
-	public MovieMinDTO(MovieMinProjection projection) {
-		id = projection.getId();
-		title = projection.getTitle();
-		subTitle = projection.getSubTitle();
-		year = projection.getYear();
-		imgUrl = projection.getImgUrl();
 	}
 
 	public Long getId() {
